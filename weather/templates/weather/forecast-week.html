@@ -4,7 +4,7 @@
 <html>
 
 <head>
-  <title>Forecast</title>
+  <title>Forecast_week</title>
 
   <link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
@@ -56,8 +56,8 @@
     <!-- botton group justified is deprecated in bootrap 4: https://stackoverflow.com/questions/34450586/justify-buttons-with-bootstrap-v4 -->
     <div class="container">
       <div class="btn d-flex btn-group-toggle" data-toggle="buttons">
-        <a href="/weather/forecast/week/" class="btn btn-secondary w-100" role="label" style=" box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.2);">Week</a>
-        <a href="/weather/forecast/" class="btn btn-secondary w-100 active" role="label" style=" box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.2);">Day</a>
+        <a href="/weather/forecast/week/" class="btn btn-secondary w-100 active" role="label" style=" box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.2);">Week</a>
+        <a href="/weather/forecast/" class="btn btn-secondary w-100" role="label" style=" box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.2);">Day</a>
         <a href="/weather/forecast/month/" class="btn btn-secondary w-100" role="label" style=" box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.2);">Month</a>
       </div>
     </div>
@@ -68,8 +68,8 @@
         <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
           <img class="card-img-top" src="https://mtech-anvil-centralca.s3.amazonaws.com/media/images/2019/01/02/images/Rainy_Weather_pix.max-1200x675.jpg" alt="card-img" style="opacity:0.4">
           <div class="card-img-overlay">
-            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
-            <p class="card-text" style="font-size:2rem;">2:00PM</p>
+            <p class="card-text" style="font-size:1rem;">June 30th</p>
+            <p class="card-text" style="font-size:2rem;">MON</p>
             <p class="card-text" style="font-size:2rem;">13&#8451;</p>
             <p class="card-text" style="font-size:2rem;">80% &#127783;</p>
           </div>
@@ -77,73 +77,55 @@
         <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
           <img class="card-img-top" src="https://mtech-anvil-centralca.s3.amazonaws.com/media/images/2019/01/02/images/Rainy_Weather_pix.max-1200x675.jpg" alt="card-img" style="opacity:0.4">
           <div class="card-img-overlay">
-            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
-            <p class="card-text" style="font-size:2rem;">3:00PM</p>
+            <p class="card-text" style="font-size:1rem;">July 1st</p>
+            <p class="card-text" style="font-size:2rem;">TUE</p>
             <p class="card-text" style="font-size:2rem;">13&#8451;</p>
             <p class="card-text" style="font-size:2rem;">80% &#127783;</p>
           </div>
         </div>
         <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
-          <img class="card-img-top" src="https://mtech-anvil-centralca.s3.amazonaws.com/media/images/2019/01/02/images/Rainy_Weather_pix.max-1200x675.jpg" alt="card-img" style="opacity:0.4">
+          <img class="card-img-top" src="https://c.pxhere.com/photos/41/4f/sun_rays_cloudy_sky_sky_blue_rays_cloudy_heaven_cloudscape-1054524.jpg!d" style="opacity:0.4">
           <div class="card-img-overlay">
-            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
-            <p class="card-text" style="font-size:2rem;">4:00PM</p>
+            <p class="card-text" style="font-size:1rem;">July 2nd</p>
+            <p class="card-text" style="font-size:2rem;">WED</p>
             <p class="card-text" style="font-size:2rem;">15&#8451;</p>
             <p class="card-text" style="font-size:2rem;">70% &#127783;</p>
           </div>
         </div>
         <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
-          <img class="card-img-top" src="https://www.goodfreephotos.com/albums/united-states/wisconsin/madison/wisconsin-madison-color-dawn-clouds.jpg" alt="card-img" style="opacity:0.4">
+          <img class="card-img-top" src="https://c.pxhere.com/photos/41/4f/sun_rays_cloudy_sky_sky_blue_rays_cloudy_heaven_cloudscape-1054524.jpg!d" style="opacity:0.4">
           <div class="card-img-overlay">
-            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
-            <p class="card-text" style="font-size:2rem;">5:00PM</p>
+            <p class="card-text" style="font-size:1rem;">July 3rd</p>
+            <p class="card-text" style="font-size:2rem;">THU</p>
             <p class="card-text" style="font-size:2rem;">16&#8451;</p>
             <p class="card-text" style="font-size:2rem;">50% &#127783;</p>
           </div>
         </div>
         <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
-          <img class="card-img-top" src="https://www.goodfreephotos.com/albums/united-states/wisconsin/madison/wisconsin-madison-color-dawn-clouds.jpg" alt="card-img" style="opacity:0.4">
+          <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Sun-in-the-sky.jpg" alt="card-img" style="opacity:0.4">
           <div class="card-img-overlay">
-            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
-            <p class="card-text" style="font-size:2rem;">6:00PM</p>
+            <p class="card-text" style="font-size:1rem;">July 4th</p>
+            <p class="card-text" style="font-size:2rem;">FRI</p>
             <p class="card-text" style="font-size:2rem;">16&#8451;</p>
             <p class="card-text" style="font-size:2rem;">50% &#127783;</p>
           </div>
         </div>
         <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
-          <img class="card-img-top" src="https://cdn12.picryl.com/photo/2016/12/31/moon-moonlight-half-moon-c870da-1024.jpg" alt="card-img" style="opacity:0.4">
+          <img class="card-img-top" src="https://c.pxhere.com/photos/41/4f/sun_rays_cloudy_sky_sky_blue_rays_cloudy_heaven_cloudscape-1054524.jpg!d" alt="card-img" style="opacity:0.4">
           <div class="card-img-overlay">
-            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
-            <p class="card-text" style="font-size:2rem;">7:00PM</p>
+            <p class="card-text" style="font-size:1rem;">July 5th</p>
+            <p class="card-text" style="font-size:2rem;">SAT</p>
             <p class="card-text" style="font-size:2rem;">16&#8451;</p>
             <p class="card-text" style="font-size:2rem;">20% &#127783;</p>
           </div>
         </div>
         <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
-          <img class="card-img-top" src="https://cdn12.picryl.com/photo/2016/12/31/moon-moonlight-half-moon-c870da-1024.jpg" alt="card-img" style="opacity:0.4">
+          <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Sun-in-the-sky.jpg" alt="card-img" style="opacity:0.4">
           <div class="card-img-overlay">
-            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
-            <p class="card-text" style="font-size:2rem;">8:00PM</p>
+            <p class="card-text" style="font-size:1rem;">July 6th</p>
+            <p class="card-text" style="font-size:2rem;">SUN</p>
             <p class="card-text" style="font-size:2rem;">15&#8451;</p>
             <p class="card-text" style="font-size:2rem;">20% &#127783;</p>
-          </div>
-        </div>
-        <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
-          <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg" alt="card-img" style="opacity:0.4">
-          <div class="card-img-overlay">
-            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
-            <p class="card-text" style="font-size:2rem;">9:00PM</p>
-            <p class="card-text" style="font-size:2rem;">14&#8451;</p>
-            <p class="card-text" style="font-size:2rem;">10% &#127783;</p>
-          </div>
-        </div>
-        <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
-          <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg" alt="card-img" style="opacity:0.4">
-          <div class="card-img-overlay">
-            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
-            <p class="card-text" style="font-size:2rem;">10:00PM</p>
-            <p class="card-text" style="font-size:2rem;">12&#8451;</p>
-            <p class="card-text" style="font-size:2rem;">10% &#127783;</p>
           </div>
         </div>
       </div>

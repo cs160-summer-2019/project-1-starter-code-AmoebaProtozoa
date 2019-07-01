@@ -2,19 +2,163 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Forecast - Alert!</title>
-	
-	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
-	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+  <title>Forecast - Alert!</title>
 
+  <link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+  <style type="text/css">
+    body {
+      background: grey !important;
+    }
+
+    /* reference: https://stackoverflow.com/questions/10768891/how-to-change-the-default-background-color-white-to-something-else-in-twitter-bo */
+  </style>
 </head>
+
 <body>
-	<!-- your single-location forecast with alert interface here -->
-</body>
+
+  <body class="text-center" style="padding: 80PX 40px; ">
+
+    <nav class="navbar navbar-dark bg-dark fixed-top" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);">
+      <div class="navbar-text">
+          <a href="/weather/comparison/alert/">&laquo; Home</a>
+      </div>
+      <div class="navbar-text">
+        <h3>
+          June 30th
+        </h3>
+      </div>
+
+
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> &#8451;
+      </label>
+        <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> &#8457;
+      </label>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);">
+        <img class="card-img-top" src="https://mtech-anvil-centralca.s3.amazonaws.com/media/images/2019/01/02/images/Rainy_Weather_pix.max-1200x675.jpg" alt="card-img" style="opacity:0.4">
+        <div class="card-img-overlay">
+          <h1 class="card-title" style="font-size:4rem; text-align:right">New York</h1>
+          <p class="card-text" style="font-size:2rem; text-align:right">13&#8451;</p>
+          <p class="card-text" style="font-size:2rem; text-align:right">1:00PM</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- alert: https://www.w3schools.com/bootstrap/bootstrap_alerts.asp# -->
+    <div class="container">
+      <div class="alert alert-danger alert-dismissible fade show" ; style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Alert!</strong> storm today <strong>3PM</strong> and <strong>4PM</strong>
+      </div>
+    </div>
+
+
+    <!-- botton group justified is deprecated in bootrap 4: https://stackoverflow.com/questions/34450586/justify-buttons-with-bootstrap-v4 -->
+    <div class="container">
+      <div class="btn d-flex btn-group-toggle" data-toggle="buttons">
+        <a href="/weather/forecast/week/alert/" class="btn btn-secondary w-100" role="label" style=" box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.2);">Week</a>
+        <a href="/weather/forecast/alert/" class="btn btn-secondary w-100 active" role="label" style=" box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.2);">Day</a>
+        <a href="/weather/forecast/month/alert/" class="btn btn-secondary w-100" role="label" style=" box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.2);">Month</a>
+      </div>
+    </div>
+
+    <!-- How to add horizontal scrolling card: https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6 -->
+    <div class="container">
+      <div class="scrolling-wrapper">
+        <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
+          <img class="card-img-top" src="https://mtech-anvil-centralca.s3.amazonaws.com/media/images/2019/01/02/images/Rainy_Weather_pix.max-1200x675.jpg" alt="card-img" style="opacity:0.4">
+          <div class="card-img-overlay">
+            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
+            <p class="card-text" style="font-size:2rem;">2:00PM</p>
+            <p class="card-text" style="font-size:2rem;">13&#8451;</p>
+            <p class="card-text" style="font-size:2rem;">80% &#127783;</p>
+          </div>
+        </div>
+        <div class="card text-white bg-dark mb-3 border-danger" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
+          <img class="card-img-top" src="https://komonews.com/resources/media/cc32e202-8685-48b5-bf52-c45da58bc4f6-large16x9_MO1_1838Edit.jpg?1541001571092" alt="card-img" style="opacity:0.4">
+          <div class="card-img-overlay">
+            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
+            <p class="card-text" style="font-size:2rem;">3:00PM</p>
+            <p class="card-text" style="font-size:2rem;">13&#8451;</p>
+            <p class="card-text" style="font-size:2rem; color: pink">STORM</p>
+          </div>
+        </div>
+        <div class="card text-white bg-dark mb-3 border-danger" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
+          <img class="card-img-top" src="https://komonews.com/resources/media/cc32e202-8685-48b5-bf52-c45da58bc4f6-large16x9_MO1_1838Edit.jpg?1541001571092" alt="card-img" style="opacity:0.4">
+          <div class="card-img-overlay">
+            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
+            <p class="card-text" style="font-size:2rem;">4:00PM</p>
+            <p class="card-text" style="font-size:2rem;">15&#8451;</p>
+            <p class="card-text" style="font-size:2rem; color: pink">STORM</p>
+          </div>
+        </div>
+        <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
+          <img class="card-img-top" src="https://www.goodfreephotos.com/albums/united-states/wisconsin/madison/wisconsin-madison-color-dawn-clouds.jpg" alt="card-img" style="opacity:0.4">
+          <div class="card-img-overlay">
+            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
+            <p class="card-text" style="font-size:2rem;">5:00PM</p>
+            <p class="card-text" style="font-size:2rem;">16&#8451;</p>
+            <p class="card-text" style="font-size:2rem;">50% &#127783;</p>
+          </div>
+        </div>
+        <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
+          <img class="card-img-top" src="https://www.goodfreephotos.com/albums/united-states/wisconsin/madison/wisconsin-madison-color-dawn-clouds.jpg" alt="card-img" style="opacity:0.4">
+          <div class="card-img-overlay">
+            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
+            <p class="card-text" style="font-size:2rem;">6:00PM</p>
+            <p class="card-text" style="font-size:2rem;">16&#8451;</p>
+            <p class="card-text" style="font-size:2rem;">50% &#127783;</p>
+          </div>
+        </div>
+        <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
+          <img class="card-img-top" src="https://cdn12.picryl.com/photo/2016/12/31/moon-moonlight-half-moon-c870da-1024.jpg" alt="card-img" style="opacity:0.4">
+          <div class="card-img-overlay">
+            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
+            <p class="card-text" style="font-size:2rem;">7:00PM</p>
+            <p class="card-text" style="font-size:2rem;">16&#8451;</p>
+            <p class="card-text" style="font-size:2rem;">20% &#127783;</p>
+          </div>
+        </div>
+        <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
+          <img class="card-img-top" src="https://cdn12.picryl.com/photo/2016/12/31/moon-moonlight-half-moon-c870da-1024.jpg" alt="card-img" style="opacity:0.4">
+          <div class="card-img-overlay">
+            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
+            <p class="card-text" style="font-size:2rem;">8:00PM</p>
+            <p class="card-text" style="font-size:2rem;">15&#8451;</p>
+            <p class="card-text" style="font-size:2rem;">20% &#127783;</p>
+          </div>
+        </div>
+        <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
+          <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg" alt="card-img" style="opacity:0.4">
+          <div class="card-img-overlay">
+            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
+            <p class="card-text" style="font-size:2rem;">9:00PM</p>
+            <p class="card-text" style="font-size:2rem;">14&#8451;</p>
+            <p class="card-text" style="font-size:2rem;">10% &#127783;</p>
+          </div>
+        </div>
+        <div class="card text-white bg-dark mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5); max-width:9rem; min-width: 9rem; min-height: 16rem">
+          <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg" alt="card-img" style="opacity:0.4">
+          <div class="card-img-overlay">
+            <p class="card-text" style="font-size:1rem;">&nbsp;</p>
+            <p class="card-text" style="font-size:2rem;">10:00PM</p>
+            <p class="card-text" style="font-size:2rem;">12&#8451;</p>
+            <p class="card-text" style="font-size:2rem;">10% &#127783;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
 </html>
-
-
-
-
-

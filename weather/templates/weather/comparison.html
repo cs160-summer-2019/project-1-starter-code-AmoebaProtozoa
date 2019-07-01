@@ -2,14 +2,93 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Comparison</title>
-	
-	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
-	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
 
+<head>
+  <title>Comparison</title>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+  <style type="text/css">
+    body {
+      background: grey !important;
+    }
+
+    /* reference: https://stackoverflow.com/questions/10768891/how-to-change-the-default-background-color-white-to-something-else-in-twitter-bo */
+  </style>
 </head>
+
 <body>
-	<!-- your comparison interface here -->
-</body>
+
+  <body class="text-center" style="padding: 80PX 40px; ">
+
+    <nav class="navbar navbar-dark bg-dark fixed-top" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);">
+      <div class="navbar-text">
+        <h3>
+          June 30th
+        </h3>
+      </div>
+
+
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> &#8451;
+      </label>
+        <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> &#8457;
+      </label>
+      </div>
+    </nav>
+
+    <div class="card-deck">
+      <!-- shadow: https://www.w3schools.com/css/css3_shadows.asp
+           card-deck: https://getbootstrap.com/docs/4.0/components/card/
+      -->
+      <div class="card text-white bg-dark mb-3" style="min-width: 18rem; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);">
+        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Sun-in-the-sky.jpg" alt="card-img" style="opacity:0.4">
+        <div class="card-img-overlay">
+          <h1 class="card-title" style="font-size:4rem; text-align:right">Berkeley</h1>
+          <p class="card-text" style="font-size:2rem; text-align:right">20&#8451;</p>
+          <p class="card-text" style="font-size:2rem; text-align:right">4:00PM</p>
+        </div>
+      </div>
+      <div class="card text-white bg-dark mb-3 " style="min-width: 18rem; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);">
+        <img class="card-img-top" src="https://mtech-anvil-centralca.s3.amazonaws.com/media/images/2019/01/02/images/Rainy_Weather_pix.max-1200x675.jpg" alt="card-img" style="opacity:0.4">
+        <div class="card-img-overlay">
+          <h1 class="card-title" style="font-size:4rem; text-align:right"><a href="/weather/forecast/" style = "color: White">New York</a></h1>
+          <p class="card-text" style="font-size:2rem; text-align:right">13&#8451;</p>
+          <p class="card-text" style="font-size:2rem; text-align:right">1:00PM</p>
+        </div>
+      </div>
+      <div class="card text-white bg-dark mb-3" style="min-width: 18rem; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);">
+        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Sun-in-the-sky.jpg" alt="card-img" style="opacity:0.4">
+        <div class="card-img-overlay">
+          <h1 class="card-title" style="font-size:4rem; text-align:right">Oakland</h1>
+          <p class="card-text" style="font-size:2rem; text-align:right">24&#8451;</p>
+          <p class="card-text" style="font-size:2rem; text-align:right">4:00PM</p>
+        </div>
+      </div>
+      <div class="card text-white bg-dark mb-3" style="min-width: 18rem; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);">
+        <img class="card-img-top" src="https://storage.needpix.com/rsynced_images/plus-1270001_1280.png" alt="card-img" style="opacity:0.4">
+      </div>
+    </div>
+    </div>
+
+    <nav class="navbar navbar-dark bg-dark fixed-bottom" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);">
+      <div class="scrollmenu">
+        <button class="btn-lg btn-outline-secondary" type="button">June 26th</button>
+        <button class="btn-lg btn-outline-secondary" type="button">June 27th</button>
+        <button class="btn-lg btn-outline-secondary" type="button">June 28th</button>
+        <button class="btn-lg btn-outline-secondary" type="button">June 29th</button>
+        <button class="btn-lg btn-outline-secondary active" type="button"><a href="/weather/comparison/" style = "color:#868e96">June 30th</a></button>
+        <button class="btn-lg btn-outline-secondary" type="button">July 1st</button>
+        <button class="btn-lg btn-outline-secondary" type="button">July 2nd</button>
+        <button class="btn-lg btn-outline-secondary" type="button"><a href="/weather/comparison/alt/" style = "color:#868e96">July 3rd</a></button>
+        <button class="btn-lg btn-outline-secondary" type="button">July 4th</button>
+        <button class="btn-lg btn-outline-secondary" type="button">July 5th</button>
+        <button class="btn-lg btn-outline-secondary" type="button">July 6th</button>
+      </div>
+    </nav>
+
+  </body>
+
 </html>
